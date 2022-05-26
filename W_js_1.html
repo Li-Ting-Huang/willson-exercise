@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 作業1
+        let friends = ["A","B","C","D"];
+        let reversed_friends = [];
+
+        for(let j = friends.length-1 ; j >= 0 ; j--){
+            let f = friends[j];
+            reversed_friends.push(f);
+        }
+        console.log(reversed_friends);
+
+        // 作業2
+        function findBigger(arr){
+            if(arr.length ==0){
+                return undefined;
+            }
+
+            let biggestNumber = -100000;
+
+            for(let i = 0;i < arr.length;i++){
+                if(arr[i]>biggestNumber){
+                    biggestNumber =arr[i];
+                }
+            }
+            return biggestNumber;
+        }
+        console.log(findBigger([-100,5,50,60,99]));
+
+        findBigger([15,20,25,30,45]);
+        findBigger([115,20,77,30,10]);
+        findBigger([15,-20,25,30,-45]);
+        findBigger([15,25,30,45]);
+
+        // 作業三
+        // 方法1-for迴圈
+        function addUpTo(n){
+            let result = 0;
+            
+            for(let i = 1 ; i <= n ; i++){
+                result += i;
+            }
+            return result;
+        }
+        console.log(addUpTo(100));
+
+        // 方法2-等差公式 = ((首項 +末項))*項數)/2 
+
+        function add(n){
+            let result = ((1+n)*n)/2;
+            return result;
+        }
+        console.log(add(10));
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS基本練習題</h1>
+    <a href="https://yuhsien.notion.site/JS-Practice-a692c4dc450c476a8a7d9f8fe997deda
+
+    ">範例連結</a>
+    <a>EX1-3解</a>
+    <script>
+        // EX1
+
+        function printMany(n){
+            for(let i = 1 ; i <= n ; i++){
+                console.log(i);
+            }
+        }
+        printMany(10);
+
+        // EX2-for
+        function printEvery3(n){
+            for(let j =1 ; j <= n ; j += 3){
+                console.log(j);
+            }
+        }
+        printEvery3(10);
+        // EX2-while
+        let i = 1 ;
+        while(i<=20){
+            console.log(i);
+            i+=3;
+        }
+        printEvery3();
+        
+        // EX3
+        function star(n){
+            let result ="";
+            for(let i = 0 ; i < n; i++){
+                result += "*";
+            }
+            return result;
+        }
+        console.log(star(5));
+        console.log(star(10));
+    
+    // EX4
+
+    function isUpperCase(str){
+        // console.log(isUpperCase(""));解決undefind問題
+        if(str.length == 0){
+            return false;
+        }
+        // .toUpperCase() 轉成大寫
+        if(str[0] == str[0].toUpperCase()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    console.log(isUpperCase("ABCD"));
+    console.log(isUpperCase("Abcd"));
+    console.log(isUpperCase(""));
+
+    // EX5
+    function isAllUpperCase(str){
+        if(str.length == 0){
+            return false;
+        }
+        let allUpperCase = true ;
+        // this is a boolean value
+        // 確認單字的每個字都是大寫
+        for(let i = 0 ; i < str.length ; i++){
+            if(str[i] != str[i].toUpperCase()){
+                allUpperCase =false ;
+            }
+        }
+        return allUpperCase;
+    }
+    
+   
+    console.log(isAllUpperCase("asss"));
+    console.log(isAllUpperCase("ABCD"));
+    console.log(isAllUpperCase(""));
+
+    function position(str){
+        for(let i = 0 ; i < str.length ; i++){
+            if(str[i]==str[i].toUpperCase()){
+                return str[i]+ "" + i;
+            }
+        }
+        return -1;
+    }
+
+    console.log(position("aaa"));
+    console.log(position("ABCD"));
+    console.log(position("bxCd"));
+
+    
+</script>
+</html>
