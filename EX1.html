@@ -100,6 +100,51 @@
     console.log(position("ABCD"));
     console.log(position("bxCd"));
 
-    
+    // EX7 找比N小的數字
+    function findSmallCount(arr,n){
+        let counter = 0 ;
+        for (let i = 0 ; i < arr.length ; i++){
+            // 如果數字小於N，counter+1
+            if(arr[i]<n){
+                counter++;
+            }
+        }
+        return counter;
+    }
+    console.log(findSmallCount([0,1,2,3],2));
+    // EX8
+    function findSmallerTotal(arr,n){
+        let sum = 0 ; 
+        for(let i = 0 ; i< arr.length ; i++){
+            if(arr[i] < n){
+                sum = arr[i] + sum;
+            }
+        }
+        return sum;
+    }
+    console.log(findSmallerTotal([1,2,3],3));
+
+    // EX9
+    function findAllSmall(arr,n){
+        let answer = [];
+        for(let i = 0 ; i < arr.length ; i++){
+            if(arr[i] < n){
+                answer.push(arr[i]);
+            }
+        }
+        return answer;
+    }
+    console.log(findAllSmall([1, 2, 3], 10));
+
+    // EX10
+    function sum(arr){
+        let result = 0;
+        for(let i = 0 ; i < arr.length ; i++){
+            result = result + arr[i];
+        }
+        return result;
+    }
+    console.log(sum([1,2,3]));
+    console.log(sum([-1,-2,-3]));
 </script>
 </html>
