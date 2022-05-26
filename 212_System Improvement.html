@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let age = prompt("請輸入您的年齡");
+
+        // 數字轉字串 number=>string     number.toString()
+        // 字串轉為數字 string=>number     Number(string)
+        age = Number(age);
+        console.log(age, typeof age);
+
+        if(isNaN(age)){
+            alert('請輸入阿拉伯數字');
+        }else{
+            
+            if (age < 0) {
+                alert('請輸入正確數字(年齡須大於0)');
+            } else if (age <= 12) {
+                alert('您是一張兒童票');
+            } else if ((12 < age) && (age <= 65)) {
+                alert('您是一張成人票');
+            } else if ((65 < age) && (age <= 150)) {
+                alert('您是一張敬老票');
+            } else {
+                alert('請輸入正確數字(年齡須小於150)');
+            }
+        
+        }
+    </script>
+</body>
+
+</html>
